@@ -6,7 +6,7 @@ h5py==3.6.0
 numpy==1.21.4
 opencv-contrib-python==4.5.5.64
 opencv-python==4.5.5.62
-tensorflow
+keras
 Werkzeug==2.0.2
 WTForms==3.0.1
 
