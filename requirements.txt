@@ -4,8 +4,7 @@ Flask-Reuploaded
 Flask-WTF
 h5py
 numpy
-opencv-python==4.5.5.62
-opencv-contrib-python==4.5.5.64
+opencv-contrib-python-headless
 tensorflow-cpu
 Werkzeug
 WTForms
