@@ -1,4 +1,5 @@
 import os
+from tensorflow.keras.models import model_from_json, load_model
 from flask import Flask, render_template, send_from_directory, url_for
 from flask_uploads import UploadSet, IMAGES, configure_uploads
 from flask_wtf import FlaskForm
@@ -7,9 +8,6 @@ from wtforms import SubmitField
 import base64
 import numpy as np
 import cv2
-from tensorflow.keras.models import model_from_json, load_model
-
-os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'lam'
