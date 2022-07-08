@@ -18,12 +18,8 @@ photos = UploadSet('photos', IMAGES)
 configure_uploads(app, photos)
 
 
-def load_model():
-    # json_file = open('model/generator_model.json', 'r')
-    # loaded_model_json = json_file.read()
-    # json_file.close()
+def SRGAN():
     loaded_model = load_model('model/generator.h5')
-    # loaded_model = model_from_json(loaded_model_json)
     loaded_model.load_weights('model/e_50_127.5_127.5.h5')
     return loaded_model
 
@@ -39,7 +35,7 @@ def enhance_image(image, name):
     image = np.asarray(image, dtype=float)
     image = image / 127.5 - 1
     image = np.expand_dims(image, axis=0)
-    model = load_model()
+    model = SRGAN()
     sr_img = model.predict(image)
     sr = np.asarray((sr_img[0] + 1) * 127.5, dtype=np.uint8)
     cv2.imwrite(name[1:], sr[:, :, ::-1])
