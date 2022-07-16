@@ -32,17 +32,15 @@
                 </div>
 
             </form>
-            {% if lr_link %}
-            <div class="mt-5 mb-5">
-                <img src="{{ lr_link }}" style="float:left; width:50%; height:50%">
-            </div>
-            {% endif %}
+            <div class=" d-flex justify-content-around mt-5 mb-5" style="width:100% ">
+                {% if lr_link %}
+                <img src="{{ lr_link }}"  style="width:45%; height:50%"/>
+                {% endif %}
 
-            {% if sr_link %}
-            <div class="mt-5 mb-5">
-                <img src="{{ sr_link }}" style="float:right; width:50%; height:50%">
+                {% if sr_link %}
+                <img src="{{ sr_link }}"  style="width:45%; height:50%" />
+                {% endif %}
             </div>
-            {% endif %}
         </div>
     </div>
 </div>
