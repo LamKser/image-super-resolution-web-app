@@ -1,1 +1,1 @@
-# Enhance image resolution with Deep Learning
+# Enhance image resolution using a Generative Adversarial Network
